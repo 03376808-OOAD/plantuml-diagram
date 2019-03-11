@@ -1,0 +1,15 @@
+@startuml
+game o-- map
+game o-- player
+game o-- waepon
+game o-- rule
+
+map o-- forest
+map o-- city
+map o-- land
+map o-- sea
+
+
+
+
+@enduml

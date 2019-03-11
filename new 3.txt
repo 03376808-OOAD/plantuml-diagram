@@ -1,0 +1,9 @@
+@startuml
+car <|-- "sport car"
+
+class "sport car"
+{
+	turbo engine
+}
+
+@enduml

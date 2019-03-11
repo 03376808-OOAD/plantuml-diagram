@@ -1,0 +1,22 @@
+@startuml
+
+animal <|-- mammal :is a
+animal <|-- bird :is a
+animal <|-- reptile :is a
+animal <|-- fish :is a
+animal <|-- Amphibians :is a
+animal <|-- Arthropods :is a
+
+class fish
+{
+	fin
+}
+
+class bird
+{
+	egg
+	+fly()
+}
+
+
+@enduml

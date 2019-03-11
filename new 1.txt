@@ -1,0 +1,28 @@
+@startuml
+
+ 
+
+car "1" o-- "4" wheel : contains
+car "1" o-- "1" engine : contains
+car "1" o-- "2..5" door : contains
+car "1" o-- "0..1" "air conditioner" : contains
+
+car <|-- taxi 
+"taxi car" o-- taxi
+person <|-- "taxi driver"
+
+"taxi car" <.. "taxi driver" : drive
+
+
+class person {
+ -name
+ #lastname
+
+}
+
+class "taxi driver" {
+ -license
+ +"Drive car()"
+}
+
+@enduml
