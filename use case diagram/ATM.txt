@@ -1,0 +1,28 @@
+@startuml
+left to right direction
+actor customer
+actor engineer
+actor :bank:
+
+customer <|-- engineer
+
+rectangle ATM{
+engineer -- (service)
+customer -- (deposit)
+customer -- (widthdraw)
+customer -- (transfer)
+customer -- (check balance)
+
+(transfer) .> (check balance) : include
+(widthdraw) .> (check balance) : include
+(check balance) -- bank
+
+(add money) -- bank
+(update balance) -- bank
+
+
+}
+
+
+
+@enduml

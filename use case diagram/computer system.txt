@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor user
+actor admin
+rectangle Windows{
+user -- (start)
+user -- (login)
+user -- (use the application) : if application \nis installed 
+user -- (shutdown)
+(use the application) -- admin
+(install the application) -- admin : if user request
+
+(add user) -- admin : if there is\na new user
+
+
+}
+
+@enduml

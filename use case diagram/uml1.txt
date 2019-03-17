@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+actor customer
+actor clerk
+rectangle application{
+customer -- (checkout)
+(checkout).> (payment) : include
+(help) .> (checkout) : extend
+(checkout)--clerk
+}
+@enduml
