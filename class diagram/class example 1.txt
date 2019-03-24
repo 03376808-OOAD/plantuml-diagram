@@ -1,3 +1,84 @@
 @startuml
+' taxi meter company
+left to right direction
+class "Manager"
+class "TaxiDriver"
+class "Taxi"
+class "Lease"
+class "Slip"
+class "Garage" 
+
+Lease <|-- "Daily lease"
+Lease <|- "Monthly lease"
+
+class Slip{
+slipID
+DriverName
+
+}
+
+class "Lease" {
+StartDate
+EndDate
+rate
+}
+
+
+class "Daily lease"{
+NumberOfDays
+Pay()
+}
+
+class "Monthly lease"{
+ balanceDue
+ payMonthly() 
+}
+
+class Employee{
+Name
+NationalID
+Salary
+PhoneNo
+}
+
+Employee <|- "TaxiDriver"
+Employee <|-- "Manager"
+
+class "TaxiDriver"{
+  LicenseNo
+  TaxiLease()
+  Drive()
+}
+
+class "Manager"{
+  ProcessQueries()
+  AddNewTaxiDriver()
+  MaintainDriverInformation()
+  AddNewTaxiCar()
+  MaintainGarage()
+  ManageSlip()
+  TaxiLeasing()
+  TransferLease()
+  ProcessReport()
+}
+
+
+class "Car"{
+  brand
+  model
+  registrationNo
+}
+Car <|- Taxi
+
+class "Taxi" {
+  meter
+  Calculate money()
+}
+
+Garage "1..1" *--- "1..*" Taxi   : have
+Lease "0..1" -- "0..1" Slip : has
+"TaxiDriver" "0..1" -- "0..1" Taxi : drive
+(TaxiDriver, Taxi) .. Lease : leased
+Manager "1..*" -- "1..1" Garage : manage
 
 @enduml
