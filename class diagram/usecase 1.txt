@@ -1,0 +1,17 @@
+@startuml
+' texi meter company
+left to right direction
+actor :Manager:
+' actor :Driver:
+:Manager: --> (Process queries)
+:Manager: --> (Add new Taxi Driver)
+:Manager: --> (Maintain driver\ninformation)
+:Manager: --> (Add new taxi)
+:Manager: --> (Maintain taxi\ninformation)
+:Manager: --> (Maintain park and \nslip information)
+:Manager: --> (manage taxi leasing) 
+note right:  daily, monthly, annual lease
+:Manager: --> (lease slip) 
+:Manager: --> (transfer lease)
+:Manager: --> (process report)
+@enduml
