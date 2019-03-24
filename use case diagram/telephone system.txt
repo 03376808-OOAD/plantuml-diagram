@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+actor caller
+actor exchange
+rectangle "Telephone system"{
+caller -- (offhook)
+caller -- (onhook)
+caller -- (dial a number)
+(dial a number) ..> (memory) : <<uses>>
+caller -- (talk)
+(talk) <.. (Receive call waiting) : <<extends>>
+caller -- (call)
+(call) -- exchange
+}
+
+
+
+@enduml

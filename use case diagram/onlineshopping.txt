@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+actor Customer
+actor :<<service>>\nAuthentication:
+actor :Identity Provider:
+actor :Credit Payment Service:
+actor :Paypal:
+rectangle  "Online Shopping System" {
+Customer -- (Make purchase)
+Customer -- (Complete\ncheckout)
+Customer -- (View items)
+
+:<<service>>\nAuthentication:-- (View items)
+:<<service>>\nAuthentication:-- (Complete\ncheckout)
+
+
+:Identity Provider:-- (View items)
+:Identity Provider:-- (Complete\ncheckout)
+
+(View items) <. (Make purchase) : include
+(Complete\ncheckout) <. (Make purchase) : include
+
+}
+
+
+@enduml

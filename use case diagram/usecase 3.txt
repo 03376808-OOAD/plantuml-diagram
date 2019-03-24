@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+actor customer
+rectangle "Payment system"{
+customer -- (Pay)
+(Pay) ..> (Credit card) : <<uses>>
+(Pay) ..> (Cash) : <<uses>>
+(Pay) ..> (QR code) : <<uses>>
+(Pay) ..> (Prompt pay) : <<uses>>
+(Cash) <.. (change) : <<extends>>
+
+
+}
+
+@enduml
+
