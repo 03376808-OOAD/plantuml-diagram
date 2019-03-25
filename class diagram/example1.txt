@@ -1,0 +1,13 @@
+@startuml
+ left to right direction
+class Student
+class BikeRider
+class Passenger{
+ +startPoint
+ -endPoint
+ -fare
+}
+
+Student "1..1" -- "1..1" BikeRider : use
+(Student, BikeRider) .. Passenger
+@enduml

@@ -1,0 +1,29 @@
+@startuml
+
+title Title
+
+( )
+note left : Note
+
+[  ]
+note right : Note
+
+' single-line comment
+
+/'
+  block comment
+'/
+
+' -------------------------------------
+actor Actor
+boundary Boundary
+control Control
+entity Entity
+database Database
+
+:Actor alias:
+
+ 
+
+
+@enduml
