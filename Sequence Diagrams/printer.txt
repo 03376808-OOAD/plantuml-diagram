@@ -1,5 +1,6 @@
 @startuml
-
+hide footbox
+title Print document
 actor user
 user --> "word processor" : MenuSelect(print)
 "word processor" --> printer : print()
