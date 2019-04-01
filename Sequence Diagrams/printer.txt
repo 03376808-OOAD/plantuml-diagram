@@ -1,0 +1,12 @@
+@startuml
+
+actor user
+user --> "word processor" : MenuSelect(print)
+"word processor" --> printer : print()
+activate printer
+printer --> printer : until last page printed 
+printer --> "word processor" : endPrint()
+deactivate printer
+"word processor" --> user  : printFinished()
+
+@enduml
