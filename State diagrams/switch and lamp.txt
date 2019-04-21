@@ -1,0 +1,18 @@
+' state diagram 1
+' switch and lamp example
+
+@startuml
+
+[*]->install : we need light  / buy a lamp
+
+install --> OFF : turn on
+OFF : The room is dark
+OFF : We are sleep
+
+OFF --> ON : need light / turn on
+ON : The room is lighted.
+ON : we are working.
+ON --> OFF : need dark / turn off
+
+OFF -> [*] : do not need lamp / uninstall
+@enduml
