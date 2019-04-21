@@ -1,0 +1,35 @@
+' example 3 : computer aggregation
+@startuml
+class Computer
+class Mouse
+class Keyboard
+class Monitor
+class Printer
+class Scanner
+
+class "External parts" as external
+Computer o-- external
+external o-- Mouse
+external o-- Keyboard
+external o-- Monitor
+external o-- Printer
+external o-- Scanner
+
+class "Internal parts" as internal
+Computer *-- internal 
+internal *-- CPU
+internal *-- RAM
+internal *-- HDD
+
+Keyboard *-- buttons
+Printer *-- tray
+Printer *-- ink
+
+Mouse *-- button
+Mouse *-- Wheel
+Mouse *-- Laser
+
+
+
+
+@enduml

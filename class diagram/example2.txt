@@ -1,0 +1,11 @@
+' Example 2
+@startuml
+class Customer
+class Seller
+class SellSlip
+
+Customer "1..*" - "1..*" Seller
+(Customer, Seller) .. SellSlip
+
+
+@enduml

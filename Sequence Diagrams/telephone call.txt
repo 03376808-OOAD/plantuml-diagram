@@ -1,0 +1,16 @@
+@startuml
+actor caller
+caller -> "caller phone" : off hook
+caller -> "caller phone" : dial
+"caller phone" -> "receiver phone" : ringing
+
+
+actor receiver
+"receiver phone" ->  receiver : ring
+"receiver phone" -> "receiver phone" : [with in 30 seconds] ringing 
+
+receiver -> "receiver phone": offhook
+"receiver phone" -> "caller phone" : [offhook with in 30 seconds] connect 
+
+
+@enduml

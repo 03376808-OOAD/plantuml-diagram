@@ -1,0 +1,19 @@
+@startuml
+'check balance sequence diagram
+actor user
+
+user  -> ATM : insert_card()
+user  -> keypad : press(pin code) 
+keypad  -> ATM :[invalid pin code] warning()
+ATM -> Monitor:[invalid pin code] showWarningMessage()
+Monitor -> ATM:  [invalid pin code] stopOperation()
+Monitor -> ATM:  [pin code] continueOperation()
+ATM -> Monitor: showMainMenu()
+user  -> keypad: checkBalance()
+keypad -> ATM : checkBalance()
+ATM -> Account : checkBalance()
+Account -> ATM : setBalance()
+ATM -> Monitor: showBalance()
+
+
+@enduml
