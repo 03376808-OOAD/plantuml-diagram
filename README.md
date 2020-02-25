@@ -6,6 +6,4 @@
 
 1.1 ใช้ตัว graphviz- x.xx.msi
 
-2.ดาวน์โหลดและติดตั้ง
-
-[plantuml.jar](http://sourceforge.net/projects/plantuml/files/plantuml.jar/download)
+2.ดาวน์โหลดและติดตั้ง [plantuml.jar](http://sourceforge.net/projects/plantuml/files/plantuml.jar/download)
