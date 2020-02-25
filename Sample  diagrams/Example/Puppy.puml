@@ -1,0 +1,10 @@
+@startuml
+ 
+class Puppy 
+{
+  void Eat()
+  void Bark()
+  void Weep()
+}
+ 
+@enduml
