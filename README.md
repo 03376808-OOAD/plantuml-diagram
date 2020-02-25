@@ -10,13 +10,16 @@
 
 3.รันโปรแกรม plantuml.jar
 
-3.1 เลือก folder ทำงาน
+![](./pictures/picture-01.png)
 
-4.ทดสอบการทำงาน โดยสร้างไฟล์ class.puml
+3.1 เลือก folder ทำงาน โดยคลิกที่
+ Change Directory
+
+4.ทดสอบการทำงาน โดยสร้างไฟล์ class.puml ภายใต้ directory ที่เลือกในข้อ 3.1
 
 4.1 ในไฟล์ class.puml  ให้พิมพ์เนื้อหาต่อไปนี้
 
-``` puml
+``` 
 @startuml
 Class01 <|-- Class02
 Class03 *-- Class04
@@ -25,4 +28,6 @@ Class07 .. Class08
 Class09 -- Class10
 @enduml
 ```
+4.2 บันทึกไฟล์ 
 
+graviz จะนำโค้ดไป render เป็นคลาสไดอะแกรม 
